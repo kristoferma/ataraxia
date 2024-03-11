@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       </div>
       <div className="absolute flex w-screen h-screen justify-center items-center">
-        <div className="bg-white p-10 rounded-full font-black text-9xl">
+        <div className="bg-white p-10 rounded-full border-2 border-black font-black text-9xl">
           Ataraxia
         </div>
       </div>
