@@ -43,6 +43,17 @@ body {
   margin-bottom: calc(var(--m) - var(--s)*0.2885); 
 }
 
+.hex-container div.red {
+  background: #ed1c24;
+}
+
+.hex-container div.blue {
+  background: #0088cb;
+}
+.hex-container div.yellow {
+  background: #ffcb05;
+}
+
 .hex-container::before {
   content: "";
   width: calc(var(--s)/2 + var(--m));
