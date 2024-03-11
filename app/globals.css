@@ -2,32 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  overflow: clip;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.main {
+  display:flex;
+  --s: 100px;  /* size  */
+  --m: 1px;    /* margin */
+  --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
+  height: 200vh;
+  width: 200vw;
+  position: absolute;
+}
+
+.hex-container {
+  font-size: 0; /*disable white space between inline block element */
+  position: relative;
+  left: -50vw;
+  top: -50vh;
+}
+
+.hex-container div {
+  width: var(--s);
+  margin: var(--m);
+  height: calc(var(--s)*1.1547); 
+  display: inline-block;
+  font-size: initial;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  background: white;
+  margin-bottom: calc(var(--m) - var(--s)*0.2885); 
+}
+
+.hex-container::before {
+  content: "";
+  width: calc(var(--s)/2 + var(--m));
+  float: left;
+  height: 120%;
+  shape-outside: repeating-linear-gradient(     
+                   #0000 0 calc(var(--f) - 3px),      
+                   #000  0 var(--f));
 }
