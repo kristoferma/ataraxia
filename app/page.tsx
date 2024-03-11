@@ -13,11 +13,18 @@ const randomColor = () => {
 
 export default function Home() {
   return (
-    <main className="main">
-      <div className="hex-container">
-        {[...Array(INITIAL_NUMBER_OF_HEXAGONS)].map((e, i) => (
-          <div className={randomColor()} key={i}></div>
-        ))}
+    <main className="main relative">
+      <div className="background">
+        <div className="hex-container">
+          {[...Array(INITIAL_NUMBER_OF_HEXAGONS)].map((e, i) => (
+            <div className={randomColor()} key={i}></div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute flex w-screen h-screen justify-center items-center">
+        <div className="bg-white p-10 rounded-full font-black text-9xl">
+          Ataraxia
+        </div>
       </div>
     </main>
   );

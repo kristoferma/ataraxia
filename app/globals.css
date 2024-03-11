@@ -15,7 +15,7 @@ body {
   }
 }
 
-.main {
+.background {
   display:flex;
   --s: 100px;  /* size  */
   --m: 1px;    /* margin */
