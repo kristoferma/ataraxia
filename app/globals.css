@@ -20,16 +20,16 @@ body {
   --s: 100px;  /* size  */
   --m: 1px;    /* margin */
   --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
-  height: 200vh;
-  width: 200vw;
+  height: 110vh;
+  width: 110vw;
   position: absolute;
 }
 
 .hex-container {
   font-size: 0; /*disable white space between inline block element */
   position: relative;
-  left: -50vw;
-  top: -50vh;
+  left: -5vw;
+  top: -5vh;
 }
 
 .hex-container div {

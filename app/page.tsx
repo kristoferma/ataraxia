@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-const INITIAL_NUMBER_OF_HEXAGONS = 1000;
+const INITIAL_NUMBER_OF_HEXAGONS = 300;
 
 const colors = ["yellow", "red", "blue"];
 
