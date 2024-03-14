@@ -15,13 +15,23 @@ const randomColor = () => {
   } else return "";
 };
 
+const isIOS = () => {
+  if (typeof window !== "undefined") {
+    const userAgent = window.navigator.userAgent;
+    return userAgent.match(/iPad/i) || userAgent.match(/iPhone/i);
+  }
+  return false;
+};
+
 export default function Home() {
   return (
     <main className="main flex flex-col justify-center relative w-screen h-screen">
       <HexagonBackground />
       <div className="absolute flex w-auto h-auto self-center">
-        <div className="bg-white p-10 rounded-full border-2 border-black font-black text-2xl md:text-9xl">
-          Ataraxia
+        <div className="bg-white p-10 rounded-full border-2 border-black font-black text-center ">
+          <h1 className="text-2xl md:text-9xl ">Ataraxia</h1>
+          <h2 className="text-xl">Nýtt bragð af hugbúnaðarbúllu</h2>
+          {isIOS() ? null : <h3 className="text-lg">Snertu sexhyrningana!</h3>}
         </div>
       </div>
     </main>
